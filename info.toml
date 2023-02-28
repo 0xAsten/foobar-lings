@@ -1,0 +1,5 @@
+[[exercises]]
+name = "hello world"
+path = "exercises/foo/bar.rs"
+mode = "compile"
+hint = """Write a printlin macro."""

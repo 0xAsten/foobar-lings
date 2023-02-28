@@ -1,0 +1,15 @@
+[package]
+name = "_foobar_lings"
+version = "0.1.0"
+edition = "2021"
+authors = [
+  "0xAsten <0xasten@gmail.com>",
+]
+
+[dependencies]
+argh = "0.1"
+toml = "0.5"
+
+[[bin]]
+name = "foobarlings"
+path = "src/main.rs"
