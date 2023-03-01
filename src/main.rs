@@ -1,7 +1,10 @@
+use crate::exercise::ExerciseList;
 use argh::FromArgs;
 use std::fs;
 use std::path::Path;
 use std::process::{Command, Stdio};
+
+mod exercise;
 
 // In sync with crate version
 const VERSION: &'static str = "0.1.0";
@@ -125,6 +128,23 @@ fn main() {
 
     let toml_str = &fs::read_to_string("info.toml").unwrap();
     let exercises = toml::from_str::<ExerciseList>(toml_str).unwrap().exercises;
+
+    let verbose = args.nocapture;
+
+    let command = args.nested.unwrap_or_else(|| {
+        println!("{DEFAULT_OUT}\n");
+        std::process::exit(0);
+    });
+
+    match command {
+        Subcommands::Verify(_) => exercise::verify::verify(&exercises, verbose),
+        Subcommands::Watch(_) => exercise::watch::watch(&exercises, verbose),
+        Subcommands::Run(args) => exercise::run::run(&exercises, &args.name, verbose),
+        Subcommands::Reset(args) => exercise::reset::reset(&exercises, &args.name),
+        Subcommands::Hint(args) => exercise::hint::hint(&exercises, &args.name),
+        Subcommands::List(args) => exercise::list::list(&exercises, &args),
+        Subcommands::Lsp(_) => exercise::lsp::lsp(),
+    }
 }
 
 fn rustc_exists() -> bool {
@@ -145,3 +165,5 @@ const WELCOME: &str = r#"       welcome to...
 /_/  \____/\____/_.___/\__,_/_/     /_/_/_/ /_/\__, /____/  
                                               /____/
 "#;
+
+const DEFAULT_OUT: &str = r#""#;

@@ -40,6 +40,24 @@ new a info.toml file including [[exercises]] info
 rustc --version
 ```
 
+### Deserialize info.toml
+
+Add dependencies to Cargo.toml
+
+```toml
+[dependencies]
+toml = "0.5"
+serde = { version = "1.0", features = ["derive"] }
+```
+
+create a new module `'exercise'`, declare the struct `Exercise` and Deserialize to `Exercise` list.
+
+```rust
+let toml_str = &fs::read_to_string("info.toml").unwrap();
+
+let exercises = toml::from_str::<ExerciseList>(toml_str).unwrap().exercises;
+```
+
 ### Install the binaries for the package
 
 > every time you make changes to `'src'` remember to reinstall the binaries

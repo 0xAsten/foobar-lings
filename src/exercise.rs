@@ -1,3 +1,18 @@
+use serde::Deserialize;
+use std::path::PathBuf;
+
+// The mode of the exercise.
+#[derive(Deserialize, Copy, Clone, Debug)]
+#[serde(rename_all = "lowercase")]
+pub enum Mode {
+    // Indicates that the exercise should be compiled as a binary
+    Compile,
+    // Indicates that the exercise should be compiled as a test harness
+    Test,
+    // Indicates that the exercise should be linted with clippy
+    Clippy,
+}
+
 #[derive(Deserialize)]
 pub struct ExerciseList {
     pub exercises: Vec<Exercise>,
