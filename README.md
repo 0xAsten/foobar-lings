@@ -1,6 +1,6 @@
 # \_foobar_lings
 
-## New Project
+## Create a package
 
 ```bash
 cargo new _foobar_lings
@@ -57,6 +57,22 @@ let toml_str = &fs::read_to_string("info.toml").unwrap();
 
 let exercises = toml::from_str::<ExerciseList>(toml_str).unwrap().exercises;
 ```
+
+## Process Subcommands
+
+### Exits when no Subcommands exist
+
+### Vrify
+
+Verify that the provided container of Exercise objects can be compiled and run without any failures. Any such failures will be reported to the end user. If the Exercise being verified is a test, the command argument nocapture boolean determines whether or not the test harness outputs are displayed.
+
+New a module `verify` and introduce it in the package
+
+```bash
+cargo run -- verify
+```
+
+### You can custom you own Subcommand or change the action of the above Subcommands
 
 ### Install the binaries for the package
 
