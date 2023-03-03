@@ -1,14 +1,14 @@
-# foobar_lings
+# foobar-lings
 
 ## Project Description
 
-Welcome to `foobar_lings`!
+Welcome to `foobar-lings`!
 
-To use `foobar_lings`, you need to have Rust installed. You can get Rust by visiting https://rustup.rs. This will also install Cargo, Rust's package and project manager.
+To use `foobar-lings`, you need to have Rust installed. You can get Rust by visiting https://rustup.rs. This will also install Cargo, Rust's package and project manager.
 
-This repository is a customizable boilerplate for [`rustlings`](https://github.com/rust-lang/rustlings), a Rust project containing small exercises designed to help you learn Rust by reading and writing code. With `foobar_lings`, you can easily create your own Rust exercises by adding them to the exercise folder, and others can use your exercises to practice their Rust skills.
+This repository is a customizable boilerplate for [`rustlings`](https://github.com/rust-lang/rustlings), a Rust project containing small exercises designed to help you learn Rust by reading and writing code. With `foobar-lings`, you can easily create your own Rust exercises by adding them to the exercise folder, and others can use your exercises to practice their Rust skills.
 
-Here are some examples of what you can do with `foobar_lings`:
+Here are some examples of what you can do with `foobar-lings`:
 
 - Create exercises that focus on specific Rust concepts, such as ownership, lifetimes, or traits.
 
@@ -18,7 +18,7 @@ Here are some examples of what you can do with `foobar_lings`:
 
 - Collaborate with others to create and solve Rust exercises together.
 
-By using `foobar_lings`, you have the flexibility to create exercises that cater to your specific needs and interests. Happy learning!
+By using `foobar-lings`, you have the flexibility to create exercises that cater to your specific needs and interests. Happy learning!
 
 ## Usage
 
@@ -42,7 +42,7 @@ cargo run
 
 ### Process Subcommands
 
-`foobar_lings` includes several subcommands to help you manage your exercises. Here's how to use them:
+`foobar-lings` includes several subcommands to help you manage your exercises. Here's how to use them:
 
 - Verify
 
@@ -56,7 +56,7 @@ cargo run -- verify
 
 - Watch
 
-The `watch` command in foobar_lings is similar to the `verify` command, but it runs the exercises in the recommended order and doesn't exit until all exercises have been completed. This makes it a great tool for practicing Rust syntax and concepts in a structured way.
+The `watch` command in foobar-lings is similar to the `verify` command, but it runs the exercises in the recommended order and doesn't exit until all exercises have been completed. This makes it a great tool for practicing Rust syntax and concepts in a structured way.
 
 With the watch command, you can:
 
@@ -128,7 +128,7 @@ You can customize your own subcommands or change the actions of the above subcom
 
 ### Install the Binaries for the Package
 
-To install the binary executable for the `foobar_lings` package, you need to add it to Cargo.toml:
+To install the binary executable for the `foobar-lings` package, you need to add it to Cargo.toml:
 
 ```toml
 [[bin]]
