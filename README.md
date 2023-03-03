@@ -72,6 +72,48 @@ New a module `verify` and introduce it in the package
 cargo run -- verify
 ```
 
+### Watch
+
+To run the exercises in the recommended order.
+
+```bash
+cargo run -- watch
+```
+
+### Run
+
+Invoke the rust compiler on the path of the given exercise
+
+```bash
+cargo run  -- run  hello-world
+```
+
+### Reset
+
+Resets the exercise by stashing the changes
+
+```bash
+cargo run  -- reset  hello-world
+```
+
+### Hint
+
+```bash
+cargo run  -- hint  hello-world
+```
+
+### LSP
+
+lsp which will generate a rust-project.json at the root of the project, this allows rust-analyzer to parse each exercise.
+
+```bash
+cargo run  -- lsp
+```
+
+### List
+
+###
+
 ### You can custom you own Subcommand or change the action of the above Subcommands
 
 ### Install the binaries for the package
