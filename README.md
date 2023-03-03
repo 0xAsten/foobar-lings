@@ -142,4 +142,10 @@ Then, you can install it by running the following command:
 cargo install --force --path .
 ```
 
-Now, you can use foobarlings instead of cargo run -- in the above commands. Remember to reinstall the binaries every time you make changes to the src folder.
+Now, you can use `'foobarlings'` instead of `'cargo run --'` in the above commands. Remember to reinstall the binaries every time you make changes to the src folder.
+
+## Thanks
+
+It is important to acknowledge the resources and tools that help us in our learning journey. We build on the foundation provided by [`rustlings`](https://github.com/rust-lang/rustlings), a Rust project containing exercises designed to help people learn Rust.
+
+We would like to express our gratitude to the creators and contributors of [`rustlings`](https://github.com/rust-lang/rustlings) for providing a valuable resource that helps people learn Rust in a fun and interactive way. Thank you for your hard work and dedication to the Rust community!
